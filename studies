@@ -21,7 +21,7 @@ CREATE TABLE `blueturtle_bmt_database`.`studies` (
  `approved_enrollment` DECIMAL(38,0) NULL,
  `current_sw_accrual` DECIMAL(38,0) NULL,
  `sw_accrual_goal` DECIMAL(38,0) NULL,
- `expected_completion_date` DATETIME NULL,
+ `expected_completion_date` DATE NULL,
  `comments` MEDIUMBLOB NULL,
  PRIMARY KEY (`id`))
  ENGINE = InnoDb;

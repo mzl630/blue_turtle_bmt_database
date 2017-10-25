@@ -4,7 +4,7 @@ CREATE TABLE `blueturtle_bmt_database`.`patients` (
   `updated_at` DATETIME NULL,
   `entity_template_id` DECIMAL(38,0) NULL,
   `deleted` DECIMAL(1,0) NULL DEFAULT 0 ,
-  `last_hct_date` DATETIME NULL,
+  `last_hct_date` DATE NULL,
   `nmdp_id` VARCHAR(255) NULL,
   `ebmt_id` VARCHAR(255) NULL,
   `embmt_cic` VARCHAR(255) NULL,
@@ -14,7 +14,7 @@ CREATE TABLE `blueturtle_bmt_database`.`patients` (
   `first_name` VARCHAR(255) NULL,
   `middle_name` VARCHAR(255) NULL,
   `last_name` VARCHAR(255) NULL,
-  `date_of_birth` DATETIME NULL,
+  `date_of_birth` DATE NULL,
   `gender` VARCHAR(255) NULL,
   `ethnicity` VARCHAR(255) NULL,
   `parents` VARCHAR(255) NULL,
@@ -22,6 +22,6 @@ CREATE TABLE `blueturtle_bmt_database`.`patients` (
   `mrn` VARCHAR(255) NULL,
   `international` TINYINT(1) NULL,
   `fert` DECIMAL(1,0) NULL,
-  `deceased_date` DATETIME NULL,
+  `deceased_date` DATE NULL,
   PRIMARY KEY (`idPatients`))
 ENGINE = InnoDB;

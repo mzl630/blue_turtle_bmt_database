@@ -5,7 +5,7 @@ CREATE TABLE `blueturtle_bmt_database`.`gvhds` (
 `entity_template_id` DECIMAL(38,0) NULL,
 `deleted` DECIMAL(1,0) NULL DEFAULT 0,
 `gvhd_result` VARCHAR(255) NULL,
-`onset_date` DATETIME NULL,
+`onset_date` DATE NULL,
 `skin_stage` DECIMAL(38,0) NULL,
 `gut_stage` DECIMAL(38,0) NULL,
 `liver_stage` DECIMAL(38,0) NULL,

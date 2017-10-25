@@ -1,0 +1,14 @@
+CREATE TABLE `blueturtle_bmt_database`.`tests` (
+  `id` DECIMAL(38,0) NOT NULL,
+  `created_at` DATETIME NULL,
+  `updated_at` DATETIME NULL,
+  `entity_template_id` DECIMAL(38,0) NULL,
+  `deleted` DECIMAL(1,0) NULL DEFAULT 0,
+  `name` VARCHAR(255) NULL,
+  `status` VARCHAR9(255) NULL,
+  `test_performed_on` DATETIME NULL,
+  `results_expected_on` DATETIME NULL,
+  `results_obtained_on` DATETIME NULL,
+  `COMMENTS` VARCHAR(255) NULL,
+  PRIMARY KEY (`id`))
+  ENGINE = InnoDB;

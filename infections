@@ -13,6 +13,6 @@ CREATE TABLE `blueturtle_bmt_database`.`infections` (
  `actual_disease` VARCHAR(255) NULL,
  `actual_disease_specify` VARCHAR(255) NULL,
  `organism` VARCHAR(255) NULL,
- `onset_date` DATETIME NULL,
+ `onset_date` DATE NULL,
  PRIMARY KEY (`id`))
  ENGINE = InnoDB;

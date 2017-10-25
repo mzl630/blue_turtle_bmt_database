@@ -5,8 +5,8 @@ CREATE TABLE `blueturtle_bmt_database`.`followups` (
 `entity_template_id` DECIMAL(38,0) NULL,
 `deleted` DECIMAL(1,0) NULL DEFAULT 0,
 `time_frame` VARCHAR(255) NULL,
-`scheduled_date` DATETIME NULL,
-`followup_date` DATETIME NULL,
+`scheduled_date` DATE NULL,
+`followup_date` DATE NULL,
 `all_medications` DECIMAL(1,0) NULL,
 `new_allergies` DECIMAL(1,0) NULL,
 `new_allergies_specify` VARCHAR(255) NULL,
@@ -15,8 +15,8 @@ CREATE TABLE `blueturtle_bmt_database`.`followups` (
 `plan` MEDIUMBLOB NULL,
 `education` MEDIUMBLOB NULL,
 `comments` VARCHAR(255) NULL,
-`physician_signoff_date` DATETIME NULL,
-`attending_signoff_date` DATETIME NULL,
+`physician_signoff_date` DATE NULL,
+`attending_signoff_date` DATE NULL,
 `medications` MEDIUMBLOB NULL,
 PRIMARY KEY (`id`))
 ENGINE = InnoDb;

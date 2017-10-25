@@ -8,7 +8,7 @@ CREATE TABLE `blueturtle_bmt_database`.`protocol_screenings` (
 `protocol_comment` VARCHAR(255) NULL,
 `consent_obtained` DECIMAL(1,0) NULL,
 `consent_obtained_fml_mtg` VARCHAR(255) NULL,
-`consent_obtained_date` DATETIME NULL,
+`consent_obtained_date` DATE NULL,
 `brown_chart` DECIMAL(1,0) NULL,
 `brown_chart_comment` VARCHAR(255) NULL,
 `epic` DECIMAL(1,0) NULL,

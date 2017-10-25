@@ -6,7 +6,7 @@ CREATE TABLE `blueturtle_bmt_database`.`infection_treatment_agents` (
 `deleted` DECIMAL(1,0) NULL DEFAULT 0,
 `name` VARCHAR(255) NULL,
 `dose` VARCHAR(255) NULL,
-`start_date` DATETIME NULL,
-`end_date` DATETIME NULL,
+`start_date` DATE NULL,
+`end_date` DATE NULL,
 PRIMARY KEY (`id`))
 ENGINE = InnoDb;
