@@ -1,0 +1,18 @@
+CREATE TABLE `blueturtle_bmt_database`.`infections` (
+ `id` DECIMAL(38,0) NOT NULL,
+ `created_at` DATETIME NULL,
+ `updated_at` DATETIME NULL,
+ `entity_template_id` DECIMAL(38,0) NULL,
+ `deleted` DECIMAL(1,0) NULL DEFAULT 0,
+ `virus_name` VARCHAR(255) NULL,
+ `detected_by_pcr` VARCHAR(255) NULL,
+ `site_blood` DECIMAL(1,0) NULL,
+ `site_stool` DECIMAL(1,0) NULL,
+ `site_urine` DECIMAL(1,0) NULL,
+ `site_tissue` DECIMAL(1,0) NULL,
+ `actual_disease` VARCHAR(255) NULL,
+ `actual_disease_specify` VARCHAR(255) NULL,
+ `organism` VARCHAR(255) NULL,
+ `onset_date` DATETIME NULL,
+ PRIMARY KEY (`id`))
+ ENGINE = InnoDB;

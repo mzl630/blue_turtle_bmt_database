@@ -1,0 +1,20 @@
+CREATE TABLE `blueturtle_bmt_database`.`intial_insurance_approvals` (
+`id` DECIMAL(38,0) NOT NULL,
+`created_at` DATETIME NULL,
+`updated_at` DATETIME NULL,
+`entity_template_id` DECIMAL(38,0) NULL,
+`deleted` DECIMAL(1,0) NULL DEFAULT 0,
+`insurance_type` VARCHAR(255) NULL,
+`lomn_requested_date` DATETIME NULL,
+`lomn_recorded_date` DATETIME NULL,
+`date_submit` DATETIME NULL,
+`date_authorized` DATETIME NULL,
+`contact_to_lomn` DECIMAL(38,0) NULL,
+`lomn_to_submission` DECIMAL(38,0) NULL,
+`submission_to_auth` DECIMAL(38,0) NULL,
+`auth_to_typing` DECIMAL(38,0) NULL,
+`comments` MEDIUMBLOB NULL,
+`fc_comments` VARCHAR(255) NULL,
+`transplant_outcome` VARCHAR(255) NULL,
+PRIMARY KEY (`id`))
+ENGINE = InnoDb;

@@ -1,0 +1,20 @@
+CREATE TABLE `blueturtle_bmt_database`.`donors` (
+`id` DECIMAL(38,0) NOT NULL,
+`created_at` DATETIME NULL,
+`updated_at` DATETIME NULL,
+`entity_template_id` DECIMAL (38,0) NULL,
+`deleted` DECIMAL(1,0) NULL DEFAULT 0,
+`donor_source` VARCHAR(255) NULL,
+`nmdp_number` VARCHAR(255) NULL,
+`specimen_received` DATETIME NULL,
+`age_in_years` DECIMAL(38,0) NULL,
+`mrn` VARCHAR(255) NULL,
+`first_name` VARCHAR(255) NULL,
+`middle_name` VARCHAR(255) NULL,
+`last_name` VARCHAR(255) NULL,
+`date_of_birth` DATETIME NULL,
+`gender` VARCHAR(255) NULL,
+`race` VARCHAR(255) NULL,
+`ethnicity` VARCHAR(255) NULL,
+PRIMARY KEY (`id`))
+ENGINE = InnoDB;

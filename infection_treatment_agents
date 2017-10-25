@@ -1,0 +1,12 @@
+CREATE TABLE `blueturtle_bmt_database`.`infection_treatment_agents` (
+`id` DECIMAL(38,0) NOT NULL,
+`created_at` DATETIME NULL,
+`updated_at` DATETIME NULL,
+`entity_template_id` DECIMAL(38,0) NULL,
+`deleted` DECIMAL(1,0) NULL DEFAULT 0,
+`name` VARCHAR(255) NULL,
+`dose` VARCHAR(255) NULL,
+`start_date` DATETIME NULL,
+`end_date` DATETIME NULL,
+PRIMARY KEY (`id`))
+ENGINE = InnoDb;

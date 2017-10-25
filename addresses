@@ -1,0 +1,19 @@
+CREATE TABLE `blueturtle_bmt_database`.`addresses` (
+  `id` DECIMAL(38,0) NOT NULL,
+  `created_at` DATETIME NULL,
+  `updated_at` DATETIME NULL,
+  `entity_template_id` DECIMAL(38,0) NULL,
+  `deleted` DECIMAL(1,0) NULL DEFAULT 0,
+  `st_line_1` VARCHAR(255) NULL,
+  `st_line_2` VARCHAR(255) NULL,
+  `city` VARCHAR(255) NULL,
+  `state` VARCHAR(255) NULL,
+  `country` VARCHAR(255) NULL,
+  `postal` VARCHAR(255) NULL,
+  `home_phone` VARCHAR(255) NULL,
+  `cell_phone` VARCHAR(255) NULL,
+  `alt_phone` VARCHAR(255) NULL,
+  `fax` VARCHAR(255) NULL,
+  `email` VARCHAR(255) NULL,
+  PRIMARY KEY (`id`))
+  ENGINE = InnoDB;

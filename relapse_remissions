@@ -1,0 +1,23 @@
+CREATE TABLE `blueturtle_bmt_database`.`relapse_remissions` (
+`id` DECIMAL(38,0) NOT NULL,
+`created_at` DATETIME NULL,
+`updated_at` DATETIME NULL,
+`entity_template_id` DECIMAL(38,0) NULL,
+`deleted` DECIMAL(1,0) NULL DEFAULT 0,
+`relapse_date` DATETIME NULL,
+`site_bm` DECIMAL(1,0) NULL,
+`site_cns` DECIMAL(1,0) NULL,
+`site_cns_comment` VARCHAR(255) NULL,
+`site_testicular` DECIMAL(1,0) NULL,
+`site_testicular_comment` VARCHAR(255) NULL,
+`site_other` DECIMAL(1,0) NULL,
+`site_other_comment` VARCHAR(255) NULL,
+`remission_date` DATETIME NULL,
+`morphology` DECIMAL(1,0) NULL,
+`cytogenetics` DECIMAL(1,0) NULL,
+`molecular` DECIMAL(1,0) NULL,
+`mrd` DECIMAL(1,0) NULL,
+`mrd_value` DECIMAL(15,10) NULL,
+`other` VARCHAR(255) NULL,
+PRIMARY KEY (`id`))
+ENGINE = InnoDb;

@@ -1,0 +1,17 @@
+CREATE TABLE `blueturtle_bmt_database`.`protocol_screenings` (
+`id` DECIMAL(38,0) NOT NULL,
+`created_at` DATETIME NULL,
+`updated_at` DATETIME NULL,
+`entity_template_id` DECIMAL(38,0) NULL,
+`deleted` DECIMAL(1,0) NULL DEFAULT 0,
+`standard_care` DECIMAL(1,0) NULL,
+`protocol_comment` VARCHAR(255) NULL,
+`consent_obtained` DECIMAL(1,0) NULL,
+`consent_obtained_fml_mtg` VARCHAR(255) NULL,
+`consent_obtained_date` DATETIME NULL,
+`brown_chart` DECIMAL(1,0) NULL,
+`brown_chart_comment` VARCHAR(255) NULL,
+`epic` DECIMAL(1,0) NULL,
+`epic_comment` VARCHAR(255) NULL,
+PRIMARY KEY (`id`))
+ENGINE = InnoDb;

@@ -1,0 +1,18 @@
+CREATE TABLE `blueturtle_bmt_database`.`collections` (
+`id` DECIMAL(38,0) NOT NULL,
+`created_at` DATETIME NULL,
+`updated_at` DATETIME NULL,
+`entity_template_id` DECIMAL(38,0) NULL,
+`deleted` DECIMAL(1,0) NULL DEFAULT 0,
+`apheresis_collection_consent` VARCHAR(255) NULL,
+`apheresis_consent_date` DATETIME NULL,
+`fellow` VARCHAR(255) NULL,
+`np` VARCHAR(255) NULL,
+`collection_status` VARCHAR(255) NULL,
+`collection_date` DATETIME NULL,
+`arc_visit` DECIMAL(1,0) NULL,
+`location` VARCHAR(255) NULL,
+`location_specify` VARCHAR(255) NULL,
+`peformed_by` VARCHAR(255) NULL,
+PRIMARY KEY (`id`))
+ENGINE = InnoDB;

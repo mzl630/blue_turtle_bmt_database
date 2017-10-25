@@ -1,0 +1,14 @@
+CREATE TABLE `blueturtle_bmt_database`.`pre_tx_education_meetings` (
+  `id` DECIMAL(38,0) NOT NULL,
+  `created_at` DATETIME NULL,
+  `updated_at` DATETIME NULL,
+  `entity_id_template` DECIMAL(38,0) NULL,
+  `deleted` DECIMAL(1,0) NULL DEFAULT 0,
+  `date_planned` DATETIME NULL,
+  `date_completed` DATETIME NULL,
+  `description` MEDIUMBLOB NULL,
+  `notes` MEDIUMBLOB NULL,
+  `physician` VARCHAR(255) NULL,
+  `nurse_practioner` VARCHAR(255) NULL,
+  PRIMARY KEY (`id`))
+  ENGINE = InnoDb;

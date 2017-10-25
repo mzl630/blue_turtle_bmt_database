@@ -1,0 +1,10 @@
+CREATE TABLE `blueturtle_bmt_database`.`ecps` (
+`id` DECIMAL(38,0) NOT NULL,
+`created_at` DATETIME NULL,
+`updated_at` DATETIME NULL,
+`entity_template_id` DECIMAL(38,0) NULL,
+`deleted` DECIMAL(1,0) NULL DEFAULT 0,
+`stage` VARCHAR(255) NULL,
+`scheduled_dates` VARCHAR(255) NULL,
+PRIMARY KEY (`id`))
+ENGINE = InnoDB;
