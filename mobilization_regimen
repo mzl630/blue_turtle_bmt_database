@@ -1,13 +1,13 @@
 CREATE TABLE `blueturtle_bmt_database`.`mobilization_regimen` (
-`id` DECIMAL(38,0) NOT NULL,
+`id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 `created_at` DATETIME NULL,
-`updated_at` DATETIME NULL,
+`updated_at` TIMESTAMP NULL,
 `entity_template_id` DECIMAL(38,0) NULL,
-`deleted` DECIMAL(1,0) NULL DEFAULT 0,
-`name` VARCHAR(255) NULL,
-`dose` DECIMAL(38,0) NULL,
-`weight` DECIMAL(15,10) NULL,
-`total_dose` DECIMAL(15,10) NULL,
-`start_date` DATETIME NULL,
+`deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
+`name` VARCHAR(50) NULL,
+`dose` DECIMAL(10,0) NULL,
+`weight` DECIMAL(4,1) NULL,
+`total_dose` DECIMAL(10,0) NULL,
+`start_date` DATE NULL,
 PRIMARY KEY (`id`))
 ENGINE = InnoDb;

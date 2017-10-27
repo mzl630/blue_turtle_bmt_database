@@ -1,9 +1,9 @@
 CREATE TABLE `blueturtle_bmt_database`.`road_map_template_planned_dates` (
-`id` DECIMAL(38,0) NOT NULL,
+`id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 `created_at` DATETIME NULL,
-`updated_at` DATETIME NULL,
+`updated_at` TIMESTAMP NULL,
 `entity_template_id` DECIMAL(38,0) NULL,
-`deleted` DECIMAL(1,0) NULL DEFAULT 0,
-`bmt_day` DECIMAL(38,0) NULL,
+`deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
+`bmt_day` INT(10) UNSIGNED NULL,
 PRIMARY KEY (`id`))
 ENGINE = InnoDb;

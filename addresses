@@ -1,19 +1,20 @@
 CREATE TABLE `blueturtle_bmt_database`.`addresses` (
-`id` DECIMAL(38,0) NOT NULL,
+`id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 `created_at` DATETIME NULL,
-`updated_at` DATETIME NULL,
+`updated_at` TIMESTAMP NULL,
 `entity_template_id` DECIMAL(38,0) NULL,
-`deleted` DECIMAL(1,0) NULL DEFAULT 0,
-`st_line_1` VARCHAR(255) NULL,
-`st_line_2` VARCHAR(255) NULL,
-`city` VARCHAR(255) NULL,
-`state` VARCHAR(255) NULL,
-`country` VARCHAR(255) NULL,
-`postal` VARCHAR(255) NULL,
-`home_phone` VARCHAR(255) NULL,
-`cell_phone` VARCHAR(255) NULL,
-`alt_phone` VARCHAR(255) NULL,
-`fax` VARCHAR(255) NULL,
-`email` VARCHAR(255) NULL,
-PRIMARY KEY (`id`))
+`deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
+`st_line_1` VARCHAR(30) NULL, # street of patient
+`st_line_2` VARCHAR(30) NULL, # street of patient
+`city` VARCHAR(50) NULL, # city of patient
+`state` CHAR(2) NULL, # state of patient
+`country` CHAR(2) NULL, # country of patient
+`postal` VARCHAR(10) NULL, # postal code of patient
+`home_phone` VARCHAR(20) NULL, # home phone of patient
+`cell_phone` VARCHAR(20) NULL, # cell phone of patient
+`alt_phone` VARCHAR(20) NULL, # alt phone of patient
+`fax` VARCHAR(20) NULL, # fax of patient
+`email` VARCHAR(50) NULL, # email of patient
+PRIMARY KEY (`id`),
+INDEX `i_addresses_entity_template_id` (`entity_template_id` ASC))
 ENGINE = InnoDB;
