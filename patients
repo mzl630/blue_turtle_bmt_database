@@ -1,7 +1,7 @@
 CREATE TABLE `blueturtle_bmt_database`.`patients` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `created_at` DATETIME NULL,
-  `updated_at` TIMESTAMP NULL,
+  `updated_at` DATETIME NULL,
   `entity_template_id` DECIMAL(38,0) NULL,
   `deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
   `last_hct_date` DATE NULL,
@@ -20,8 +20,9 @@ CREATE TABLE `blueturtle_bmt_database`.`patients` (
   `parents` VARCHAR(255) NULL,
   `ssn` VARCHAR(255) NULL,
   `mrn` VARCHAR(10) NULL,
-  `international` TINYINT(1) NULL,
-  `fert` DECIMAL(1,0) NULL,
+  `international` TINYINT(1) UNSIGNED NULL,
+  `fert` TINYINT(1) UNSIGNED NULL,
   `deceased_date` DATE NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+  PRIMARY KEY (`id`),
+  KEY `I_PATIENTS_ENTITY_TEMPLATE_ID` (`entity_template_id` ASC))
+ENGINE = InnoDB DEFAULT CHARSET=utf8;

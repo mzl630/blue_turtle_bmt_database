@@ -1,7 +1,7 @@
 CREATE TABLE `blueturtle_bmt_database`.`tests` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `created_at` DATETIME NULL,
-  `updated_at` TIMESTAMP NULL,
+  `updated_at` DATETIME NULL,
   `entity_template_id` DECIMAL(38,0) NULL,
   `deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
   `name` VARCHAR(255) NULL,
@@ -10,5 +10,6 @@ CREATE TABLE `blueturtle_bmt_database`.`tests` (
   `results_expected_on` DATE NULL,
   `results_obtained_on` DATE NULL,
   `COMMENTS` VARCHAR(255) NULL,
-  PRIMARY KEY (`id`))
-  ENGINE = InnoDB;
+  PRIMARY KEY (`id`),
+  KEY `I_TESTS_ENTITY_TEMPLATE_ID` (`entity_template_id` ASC))
+  ENGINE = InnoDB DEFAULT CHARSET=utf8;

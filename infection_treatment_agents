@@ -1,12 +1,13 @@
 CREATE TABLE `blueturtle_bmt_database`.`infection_treatment_agents` (
 `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 `created_at` DATETIME NULL,
-`updated_at` TIMESTAMP NULL,
+`updated_at` DATETIME NULL,
 `entity_template_id` DECIMAL(38,0) NULL,
 `deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
 `name` VARCHAR(50) NULL,
 `dose` VARCHAR(20) NULL,
 `start_date` DATE NULL,
 `end_date` DATE NULL,
-PRIMARY KEY (`id`))
-ENGINE = InnoDb;
+PRIMARY KEY (`id`),
+KEY `i_infection_treatment_agents_entity_template_id` (`entity_template_id` ASC))
+ENGINE = InnoDb DEFAULT CHARSET=utf8;

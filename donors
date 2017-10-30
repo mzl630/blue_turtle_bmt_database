@@ -1,14 +1,14 @@
 CREATE TABLE `blueturtle_bmt_database`.`donors` (
 `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 `created_at` DATETIME NULL,
-`updated_at` TIMESTAMP NULL,
+`updated_at` DATETIME NULL,
 `entity_template_id` DECIMAL(38,0) NULL,
 `deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
 `donor_source` VARCHAR(20) NULL,
 `nmdp_number` VARCHAR(20) UNSIGNED NULL,
 `specimen_received` DATE NULL,
-`age_in_years` TINYINT(2) NULL,
-`mrn` INT(8) UNISGNED NULL,
+`age_in_years` TINYINT(2) UNSIGNED NULL,
+`mrn` INT(8) UNSIGNED NULL,
 `first_name` VARCHAR(50) NULL,
 `middle_name` VARCHAR(50) NULL,
 `last_name` VARCHAR(50) NULL,
@@ -16,5 +16,6 @@ CREATE TABLE `blueturtle_bmt_database`.`donors` (
 `gender` ENUM('male', 'female') NULL,
 `race` VARCHAR(20) NULL,
 `ethnicity` VARCHAR(20) NULL,
-PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+PRIMARY KEY (`id`),
+KEY `I_DONORS_ENTITY_TEMPLATE_ID` (`entity_template_id` ASC))
+ENGINE = InnoDB DEFAULT CHARSET=utf8;

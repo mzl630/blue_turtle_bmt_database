@@ -1,11 +1,12 @@
 CREATE TABLE `blueturtle_bmt_database`.`discharge_medicines` (
 `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 `created_at` DATETIME NULL,
-`updated_at` TIMESTAMP NULL,
+`updated_at` DATETIME NULL,
 `entity_template_id` DECIMAL(38,0) NULL,
-`deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,,
+`deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
 `medicine` VARCHAR(50) NULL,
 `instruction` VARCHAR(50) NULL,
 `other_specify` VARCHAR(50) NULL,
-PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+PRIMARY KEY (`id`),
+KEY `i_discharge_medications_entity_template_id` (`entity_template_id` ASC))
+ENGINE = InnoDb DEFAULT CHARSET=utf8;

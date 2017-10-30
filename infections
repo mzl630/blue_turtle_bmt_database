@@ -1,11 +1,11 @@
 CREATE TABLE `blueturtle_bmt_database`.`infections` (
 `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 `created_at` DATETIME NULL,
-`updated_at` TIMESTAMP NULL,
+`updated_at` DATETIME NULL,
 `entity_template_id` DECIMAL(38,0) NULL,
 `deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
 `virus_name` VARCHAR(50) NULL,
-`detected_by_pcr` ENUM('yes','no') NULL,
+`detected_by_pcr` TINYINT(1) UNSIGNED NULL,
 `site_blood` TINYINT(1) UNSIGNED NULL,
 `site_stool` TINYINT(1) UNSIGNED NULL,
 `site_urine` TINYINT(1) UNSIGNED NULL,
@@ -14,5 +14,6 @@ CREATE TABLE `blueturtle_bmt_database`.`infections` (
 `actual_disease_specify` VARCHAR(50) NULL,
 `organism` VARCHAR(50) NULL,
 `onset_date` DATE NULL,
-PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+PRIMARY KEY (`id`),
+KEY `i_infections_entity_template_id` (`entity_template_id` ASC))
+ENGINE = InnoDB DEFAULT CHARSET=utf8;

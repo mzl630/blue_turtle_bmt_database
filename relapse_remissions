@@ -1,9 +1,9 @@
 CREATE TABLE `blueturtle_bmt_database`.`relapse_remissions` (
 `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 `created_at` DATETIME NULL,
-`updated_at` TIMESTAMP NULL,
+`updated_at` DATETIME NULL,
 `entity_template_id` DECIMAL(38,0) NULL,
-`deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0, 
+`deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
 `relapse_date` DATE NULL,
 `site_bm` TINYINT(1) UNSIGNED NULL,
 `site_cns` TINYINT(1) UNSIGNED NULL,
@@ -19,5 +19,6 @@ CREATE TABLE `blueturtle_bmt_database`.`relapse_remissions` (
 `mrd` TINYINT(1) UNSIGNED NULL,
 `mrd_value` DECIMAL(3,1) NULL,
 `other` VARCHAR(255) NULL,
-PRIMARY KEY (`id`))
-ENGINE = InnoDb;
+PRIMARY KEY (`id`),
+KEY `I_REL_REM_ENT_TEM_ID` (`entity_template_id` ASC))
+ENGINE = InnoDb DEFAULT CHARSET=utf8;

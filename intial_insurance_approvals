@@ -1,7 +1,7 @@
 CREATE TABLE `blueturtle_bmt_database`.`intial_insurance_approvals` (
 `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 `created_at` DATETIME NULL,
-`updated_at` TIMESTAMP NULL,
+`updated_at` DATETIME NULL,
 `entity_template_id` DECIMAL(38,0) NULL,
 `deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
 `insurance_type` VARCHAR(255) NULL,
@@ -17,5 +17,6 @@ CREATE TABLE `blueturtle_bmt_database`.`intial_insurance_approvals` (
 `comments` MEDIUMBLOB NULL,
 `fc_comments` VARCHAR(255) NULL,
 `transplant_outcome` VARCHAR(255) NULL,
-PRIMARY KEY (`id`))
-ENGINE = InnoDb;
+PRIMARY KEY (`id`),
+KEY `i_intial_insurance_approvals_entity_template_id` (`entity_template_id` ASC))
+ENGINE = InnoDb DEFAULT CHARSET=utf8;

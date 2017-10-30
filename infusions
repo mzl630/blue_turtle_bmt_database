@@ -1,7 +1,7 @@
 CREATE TABLE `blueturtle_bmt_database`.`infusions` (
 `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 `created_at` DATETIME NULL,
-`updated_at` TIMESTAMP NULL,
+`updated_at` DATETIME NULL,
 `entity_template_id` DECIMAL(38,0) NULL,
 `deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
 `infusion_type` VARCHAR(50) NULL,
@@ -9,7 +9,7 @@ CREATE TABLE `blueturtle_bmt_database`.`infusions` (
 `utn` DECIMAL(38,0) NULL,
 `infusion_date` DATE NULL,
 `comments` VARCHAR(255) NULL,
-`completed` TINYINT(1) UNSIGNED NULl,
+`completed` TINYINT(1) UNSIGNED NULL,
 `physician` VARCHAR(100) NULL,
 `nurse` VARCHAR(100) NULL,
 `started_by` VARCHAR(50) NULL,
@@ -17,7 +17,7 @@ CREATE TABLE `blueturtle_bmt_database`.`infusions` (
 `ended_by` VARCHAR(50) NULL,
 `end_at` DATETIME NULL,
 `method` VARCHAR(20) NULL,
-`volume` INT(10) UNISGNED NULL,
+`volume` INT(10) UNSIGNED NULL,
 `pre_medication` VARCHAR(100) NULL,
 `engraftment_type` VARCHAR(50) NULL,
 `date_anc500` DATE NULL,
@@ -38,5 +38,6 @@ CREATE TABLE `blueturtle_bmt_database`.`infusions` (
 `organ_impairment` TINYINT(1) UNSIGNED NULL,
 `organ_impairment_date` DATE NULL,
 `organ_impairment_specify` VARCHAR(50) NULL,
-PRIMARY KEY (`id`))
-ENGINE = InnoDb;
+PRIMARY KEY (`id`),
+KEY `I_INFUSIONS_ENTITY_TEMPLATE_ID` (`entity_template_id` ASC))
+ENGINE = InnoDb DEFAULT CHARSET=utf8;

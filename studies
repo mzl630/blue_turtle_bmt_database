@@ -1,7 +1,7 @@
 CREATE TABLE `blueturtle_bmt_database`.`studies` (
 `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 `created_at` DATETIME NULL,
-`updated_at` TIMESTAMP NULL,
+`updated_at` DATETIME NULL,
 `entity_template_id` DECIMAL(38,0) NULL,
 `deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
 `study_number` VARCHAR(255) NULL,
@@ -16,12 +16,13 @@ CREATE TABLE `blueturtle_bmt_database`.`studies` (
 `regulatory_reporting_to` VARCHAR(255) NULL,
 `sponsor` VARCHAR(255) NULL,
 `regulatory_accuity` VARCHAR(255) NULL,
-`funded` TINYINT(1) NULL,
+`funded` TINYINT(1) UNSIGNED NULL,
 `fund_comment` VARCHAR(255) NULL,
 `approved_enrollment` INT(5) UNSIGNED NULL,
 `current_sw_accrual` INT(5) UNSIGNED NULL,
-`sw_accrual_goal` INT(5) NULL,
+`sw_accrual_goal` INT(5) UNSIGNED NULL,
 `expected_completion_date` DATE NULL,
 `comments` MEDIUMBLOB NULL,
-PRIMARY KEY (`id`))
-ENGINE = InnoDb;
+PRIMARY KEY (`id`),
+KEY `I_STUDIES_ENTITY_TEMPLATE_ID` (`entity_template_id` ASC))
+ENGINE = InnoDb DEFAULT CHARSET=utf8;

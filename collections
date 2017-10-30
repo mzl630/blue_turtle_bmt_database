@@ -1,18 +1,19 @@
 CREATE TABLE `blueturtle_bmt_database`.`collections` (
 `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 `created_at` DATETIME NULL,
-`updated_at` TIMESTAMP NULL,
+`updated_at` DATETIME NULL,
 `entity_template_id` DECIMAL(38,0) NULL,
 `deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
-`apheresis_collection_consent` ENUM('yes', 'no') NULL,
+`apheresis_collection_consent` TINYINT(1) UNSIGNED NULL,
 `apheresis_consent_date` DATE NULL,
 `fellow` VARCHAR(50) NULL,
 `np` VARCHAR(50) NULL,
-`collection_status` VARCHAR(30) NULL,
+`collection_status` VARCHAR(50) NULL,
 `collection_date` DATE NULL,
-`arc_visit` ENUM('yes', 'no') NOT NULL,
+`arc_visit` TINYINT(1) UNSIGNED NULL,
 `location` VARCHAR(20) NULL,
 `location_specify` VARCHAR(50) NULL,
 `peformed_by` VARCHAR(50) NULL,
-PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+PRIMARY KEY (`id`),
+KEY `i_collections_entity_template_id` (`entity_template_id` ASC))
+ENGINE = InnoDb DEFAULT CHARSET=utf8;

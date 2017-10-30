@@ -1,7 +1,7 @@
 CREATE TABLE `blueturtle_bmt_database`.`gvhds` (
 `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 `created_at` DATETIME NULL,
-`updated_at` TIMESTAMP NULL,
+`updated_at` DATETIME NULL,
 `entity_template_id` DECIMAL(38,0) NULL,
 `deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
 `gvhd_result` VARCHAR(10) NULL,
@@ -12,5 +12,6 @@ CREATE TABLE `blueturtle_bmt_database`.`gvhds` (
 `overall_grade` TINYINT(1) UNSIGNED NULL,
 `chronic` ENUM('yes','no', 'NA') NULL,
 `chronic_level` ENUM('limited', 'extensive') NULL,
-PRIMARY KEY (`id`))
-ENGINE = InnoDb;
+PRIMARY KEY (`id`),
+KEY `I_GVHDS_ENTITY_TEMPLATE_ID` (`entity_template_id` ASC))
+ENGINE = InnoDb DEFAULT CHARSET=utf8;

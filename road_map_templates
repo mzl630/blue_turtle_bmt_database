@@ -1,10 +1,11 @@
 CREATE TABLE `blueturtle_bmt_database`.`road_map_templates` (
 `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 `created_at` DATETIME NULL,
-`updated_at` TIMESTAMP NULL,
+`updated_at` DATETIME NULL,
 `entity_template_id` DECIMAL(38,0) NULL,
 `deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
 `name` VARCHAR(255) NULL,
 `instructions` VARCHAR(255) NULL,
-PRIMARY KEY (`id`))
-ENGINE = InnoDb;
+PRIMARY KEY (`id`),
+KEY `I_ROA_MAP_TEM_ENT_TEM_ID` (`entity_template_id` ASC))
+ENGINE = InnoDb DEFAULT CHARSET=utf8;

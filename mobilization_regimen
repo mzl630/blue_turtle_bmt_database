@@ -1,7 +1,7 @@
 CREATE TABLE `blueturtle_bmt_database`.`mobilization_regimen` (
 `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 `created_at` DATETIME NULL,
-`updated_at` TIMESTAMP NULL,
+`updated_at` DATETIME NULL,
 `entity_template_id` DECIMAL(38,0) NULL,
 `deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
 `name` VARCHAR(50) NULL,
@@ -9,5 +9,6 @@ CREATE TABLE `blueturtle_bmt_database`.`mobilization_regimen` (
 `weight` DECIMAL(4,1) NULL,
 `total_dose` DECIMAL(10,0) NULL,
 `start_date` DATE NULL,
-PRIMARY KEY (`id`))
-ENGINE = InnoDb;
+PRIMARY KEY (`id`),
+KEY `i_mobilization_regimen_entity_template_id` (`entity_template_id` ASC))
+ENGINE = InnoDb DEFAULT CHARSET=utf8;

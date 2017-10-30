@@ -1,14 +1,14 @@
 CREATE TABLE `blueturtle_bmt_database`.`followups` (
 `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 `created_at` DATETIME NULL,
-`updated_at` TIMESTAMP NULL,
+`updated_at` DATETIME NULL,
 `entity_template_id` DECIMAL(38,0) NULL,
 `deleted` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
 `time_frame` VARCHAR(255) NULL,
 `scheduled_date` DATE NULL,
 `followup_date` DATE NULL,
-`all_medications` ENUM('yes', 'no') NULL,
-`new_allergies` ENUM('yes', 'no') NULL,
+`all_medications` TINYINT(1) UNSIGNED NULL,
+`new_allergies` TINYINT(1) UNSIGNED NULL,
 `new_allergies_specify` VARCHAR(255) NULL,
 `pain` VARCHAR(255) NULL,
 `impression` MEDIUMBLOB NULL,
@@ -18,5 +18,6 @@ CREATE TABLE `blueturtle_bmt_database`.`followups` (
 `physician_signoff_date` DATE NULL,
 `attending_signoff_date` DATE NULL,
 `medications` MEDIUMBLOB NULL,
-PRIMARY KEY (`id`))
-ENGINE = InnoDb;
+PRIMARY KEY (`id`),
+KEY `I_FOLLOWUPS_ENTITY_TEMPLATE_ID` (`entity_template_id` ASC))
+ENGINE = InnoDb DEFAULT CHARSET=utf8;
